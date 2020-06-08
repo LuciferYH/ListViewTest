@@ -8,6 +8,7 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
     private String[] data = {"a","s","q","w","e","r","t","y","u","i","o","p","d","f","g"};
+    ListView listView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,data);
         //适配器
         //当前上下文，ListView子项布局的id，要适配的参数
-        ListView listView = findViewById(R.id.list_view);
+        listView = findViewById(R.id.list_view);
         listView.setAdapter(adapter);
     }
 }
